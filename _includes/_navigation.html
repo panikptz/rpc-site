@@ -1,0 +1,36 @@
+<div id="outer-wrap">
+<div id="inner-wrap">
+
+    <header id="top" role="banner">
+        <div class="logo"></div>
+        <div class="block">
+            <div class="head-block">
+            <h1 class="block-title-name">{{ site.title }}</h1>
+            <h2 class="block-title-address">{{ site.title_address }}</h2>
+            <h1 class="block-title-small">{{ site.title_small }}</h1>
+            <a class="nav-btn" id="nav-open-btn" href="#nav">Navigation</a>
+            </div>
+            <div class="head-block line">
+                <h2 class="block-title">{{ site.title_phone_1 }}</h2>
+            </div>
+            <div class="head-block line">
+                <h2 class="block-title">{{ site.title_phone_2 }}</h2>
+            </div>
+            <div class="head-block line">
+                <h2 class="block-title">{{ site.title_rodi }}</h2>
+            </div>
+        </div>
+    </header>
+
+    <nav id="nav" role="navigation">
+        <div class="block">
+            <h2 class="block-title">Chapters</h2>
+            <ul>
+                {% for link in site.data.navigation %}
+				<li><a href="{% if link.external %}{{ link.url }}{% else %}{{ site.url }}{{ link.url }}{% endif %}" {% if link.external %}target="_blank"{% endif %}>{{ link.title }}</a></li>
+		        {% endfor %}
+		        <!-- <li><a href="{{ site.url }}/feed.xml" title="Atom/RSS feed">Feed</a> -->
+            </ul>
+            <a class="close-btn" id="nav-close-btn" href="#top">Return to Content</a>
+        </div>
+    </nav>

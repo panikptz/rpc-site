@@ -1,4 +1,4 @@
-title:            ГБУЗ РЕСПУБЛИКИ КАРЕЛИЯ<br>"РЕСПУБЛИКАНСКИЙ ПЕРИНАТАЛЬНЫЙ ЦЕНТР"
+title:            ГБУЗ РЕСПУБЛИКИ КАРЕЛИЯ "РЕСПУБЛИКАНСКИЙ ПЕРИНАТАЛЬНЫЙ ЦЕНТР"
 title_small:      ГБУЗ РПЦ
 title_address:    Республика Карелия, г. Петрозаводск, ул. Сыктывкарская, д. 9
 title_phone_1:    Приемная главного врача<br>8(8142) 333-111
@@ -13,7 +13,7 @@ url:
 
 # Owner/author information
 owner:
-  name:           
+  name:           Пазий Андрей
   avatar:         ico_telephone.jpg
   bio:            "Регистратура Консультативно-диагностического отделения: 8905-299-97-16, 8(8142)333-115<br><br>Приемный покой:<br>8905-299-97-12, 8(8142)333-113<br><br>Отделение лучевой и магнитно-резонансной диагностики:<br>8(8142)333-111 доб. 1138<br><br>Пост родового отделения:<br>8905-299-97-19,<br>8(8142)333-111,<br>доб. 5025 или доб. 5026"
   email:          rpc@zdrav10.ru
@@ -91,10 +91,13 @@ exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.
 collections:
   structure:
     output: true
+  staff:
+    output: false
+    sort_by: order
 
 defaults:
   - scope:
       path: ""
       type: "structure"
     values:
-      layout: "page"
+      layout: "department"

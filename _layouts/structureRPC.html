@@ -13,11 +13,24 @@
 
 {% include _navigation.html %}
 
+<div id="main" role="main"  itemprop="mainContentOfPage">
+    <div class="article-author-side">
+      {% include _author-bio.html %}
+    </div>
+    <article itemscope itemtype="http://schema.org/CreativeWork">
+      <h1 itemprop="name">{{ page.title }}</h1>
+      <div class="article-wrap" itemprop="text">
+
 <ul>
     {% for link in site.structure %}
     <li><a href="{{ link.url }}">{{ link.title | upcase }}</a></li>
     {% endfor %}
 </ul>
+
+</div><!-- /.article-wrap -->
+</article>
+</div><!-- /#index -->
+
 
 <div class="footer-wrap">
     <footer>

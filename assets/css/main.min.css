@@ -3006,7 +3006,7 @@
     font-size:1.275em;
 	line-height:1.2em;
 	/* text-align:center; */
-	white-space:nowrap;
+	/* white-space:nowrap; */
     margin-left: 5em;
 }
 
@@ -3015,6 +3015,10 @@
     padding-right: 1em;
     margin-top: 0.5em;
 	color: #fff;
+}
+
+#top .head-block:first-child{
+	width: 29em;
 }
 
 #top .block-title-address

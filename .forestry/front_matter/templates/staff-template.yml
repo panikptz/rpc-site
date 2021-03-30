@@ -11,3 +11,5 @@ fields:
 - type: number
   name: order
   label: order
+pages:
+- _staff/aopb/хвоина-анна-викторовна.md

@@ -22,25 +22,31 @@
       <div class="article-wrap" itemprop="text">
 
 
-{% assign all_departments = site.staff %}
+<!-- {% assign all_departments = site.staff %}
 {% for p in all_departments %}
 {{ p.path | split: '/' | inspect }}
 {% assign pp = p.path | split: '/' %}
 {{ pp[1] }}
-{% endfor %}
+{% endfor %} -->
 <!-- <pre>
 {{ all_departments | inspect  }}
 </pre> -->
 
-{{ content }}
-
 {% assign this_department = page.path | split: '/' | last | replace: ".md", "" %}
+
+{{ site.staff.ro }}
+
+{{ content }}
 
 
 <ul>
-    {% assign filtered_staff = site.staff | where: 'department', this_department | sort: 'order' %}
+    <!-- {% assign filtered_staff = site.staff | where: 'department', this_department | sort: 'order' %} -->
+    {% assign filtered_staff = site.staff | sort: 'order' %}
     {% for staff in filtered_staff %}
+    {% assign pp = staff.path | split: '/' %}
+    {% if pp[1] == this_department %}
     <li>{{ staff.title | upcase }}{{ staff.content | markdownify }}</li>
+    {% endif %}
     {% endfor %}
 </ul>
 

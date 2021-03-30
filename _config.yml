@@ -93,7 +93,7 @@ collections:
     output: true
   staff:
     output: false
-    sort_by: order
+    # sort_by: order
 
 defaults:
   - scope:

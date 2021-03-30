@@ -26,9 +26,9 @@
 {% assign this_department = page.path | split: '/' | last | replace: ".md", "" %}
 
 <ul>
-    {% assign filtered_staff = site.staff | where: 'department', this_department %}
+    {% assign filtered_staff = site.staff | where: 'department', this_department | sort: 'order' %}
     {% for staff in filtered_staff %}
-    <li>{{ staff.order }} {{ staff.title | upcase }}{{ staff.content }}</li>
+    <li>{{ staff.title | upcase }}{{ staff.content }}</li>
     {% endfor %}
 </ul>
 

@@ -4,7 +4,10 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: FIO
+  description: Фамилия Имя Отчество
+  config:
+    required: true
 - type: number
   name: order
   label: order

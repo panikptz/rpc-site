@@ -4,7 +4,6 @@ title: Яцухно Людмила Васильевна
 #   feature: texture-feature-02.jpg
 #   credit: Texture Lovers
 #   creditlink: http://texturelovers.com
-department: ro
 order: 1
 ---
 

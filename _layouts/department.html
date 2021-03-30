@@ -21,14 +21,26 @@
       <h1 itemprop="name">{{ page.title }}</h1>
       <div class="article-wrap" itemprop="text">
 
+
+{% assign all_departments = site.staff %}
+{% for p in all_departments %}
+{{ p.path | split: '/' | inspect }}
+{% assign pp = p.path | split: '/' %}
+{{ pp[1] }}
+{% endfor %}
+<!-- <pre>
+{{ all_departments | inspect  }}
+</pre> -->
+
 {{ content }}
 
 {% assign this_department = page.path | split: '/' | last | replace: ".md", "" %}
 
+
 <ul>
     {% assign filtered_staff = site.staff | where: 'department', this_department | sort: 'order' %}
     {% for staff in filtered_staff %}
-    <li>{{ staff.title | upcase }}{{ staff.content }}</li>
+    <li>{{ staff.title | upcase }}{{ staff.content | markdownify }}</li>
     {% endfor %}
 </ul>
 

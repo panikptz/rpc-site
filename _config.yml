@@ -93,6 +93,8 @@ collections:
     output: true
   staff:
     output: false
+    # Почему-то указанная здесь сортировака не работает на Github pages.
+    # Поэтому указываю сортировку в каждом файле сотрудника и обрабатываю ее в _\layouts\department.html
     # sort_by: order
 
 defaults:

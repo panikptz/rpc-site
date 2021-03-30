@@ -28,7 +28,7 @@
 <ul>
     {% assign filtered_staff = site.staff | where: 'department', this_department %}
     {% for staff in filtered_staff %}
-    <li>{{ staff.title | upcase }}{{ staff.content }}</li>
+    <li>{{ staff.order }} {{ staff.title | upcase }}{{ staff.content }}</li>
     {% endfor %}
 </ul>
 

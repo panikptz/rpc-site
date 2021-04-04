@@ -15,8 +15,10 @@ sections:
   create: all
   match: "**/*"
 - type: jekyll-posts
-  label: Posts
+  label: Новости
   create: all
+  templates:
+  - news
 - type: jekyll-pages
   label: Pages
   create: all

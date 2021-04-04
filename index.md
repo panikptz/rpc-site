@@ -1,6 +1,6 @@
 ---
 layout: home
-description: "A responsive Jekyll theme with editorial tendencies by designer Michael Rose."
+description: "ГБУЗ 'Республиканский перинатальный центр' МЗСР РК"
 tags: [Jekyll, theme, responsive, blog, template]
 image:
   feature: texture-feature-01.jpg

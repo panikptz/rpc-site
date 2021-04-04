@@ -3,17 +3,12 @@ label: News
 hide_body: false
 fields:
 - type: text
-  name: layout
-  label: layout
-- type: text
   name: title
-  label: title
+  label: Заголовок новости
+  config:
+    required: true
 - type: text
   name: description
-  label: description
-- type: text
-  name: category
-  label: category
-- type: list
-  name: tags
-  label: tags
+  label: Краткое описание новости
+  config:
+    required: true

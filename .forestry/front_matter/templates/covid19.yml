@@ -22,8 +22,8 @@ fields:
   name: date
   label: Дата документа
   config:
-    date_format: YYYY-MM-DD HH:MM
-    time_format: ''
+    date_format: YYYY-MM-DD
+    time_format: hh:mm
     display_utc: false
     required: true
   default: now

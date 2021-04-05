@@ -4,6 +4,8 @@
     url: /news/
   - title: Информация для пациентов
     url: /articles/
+  - title: Банк документов
+    url: /doc/
   - title: Структура центра
     url: /structure/
   - title: Платные услуги

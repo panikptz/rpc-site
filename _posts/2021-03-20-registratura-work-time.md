@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Уважаемые пациенты!"
 description: "Временный режим работы регистратуры"
 category: news

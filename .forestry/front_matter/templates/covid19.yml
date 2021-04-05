@@ -1,5 +1,5 @@
 ---
-label: covid19
+label: covid19 template
 hide_body: false
 fields:
 - type: text

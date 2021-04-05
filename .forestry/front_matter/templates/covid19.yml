@@ -11,10 +11,13 @@ fields:
   label: Наименование
   config:
     required: true
-- type: text
-  name: url-doc
+- name: url-doc
+  type: file
+  config:
+    maxSize: 64
   label: URL документа
-  default: ''
+  description: Здесь указываем путь к любому документу из хранилища media (uploads).<br><strong>Картинки
+    вставляем в тело документа.</strong>
 - type: datetime
   name: date
   label: Дата документа

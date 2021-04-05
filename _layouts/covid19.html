@@ -27,10 +27,11 @@
     <div class="article-wrap" itemprop="text">
       {{ content }}
 
-      {% for item in site.covid19 limit:4 %}
+      {% assign items = site.covid19 | sort: 'date' %}
+      {% for item in items %}
       {% assign f = item.path | split: '/' | last %}
       {% if f != 'index.md' %}
-      <a href="{{ site.url }}/covid19/{{ item.url-doc }}" target="_blank" rel="bookmark" title="{{ item.title }}"><h2 itemprop="headline">{{ item.title }}</h2></a>
+      <a href="{{ site.url }}{% if item.url-doc %}/covid19/{{ item.url-doc }}{% else %}{{ item.url }}{% endif %}" {% if item.url-doc %}target="_blank"{% endif %} rel="bookmark" title="{{ item.title }}"><h2 itemprop="headline">{{ item.title }}</h2></a>
       {% endif %}
       {% endfor %}
 

@@ -13,14 +13,16 @@ sections:
   - covid19
 - type: directory
   path: _structure
-  label: Structure
+  label: Структура РПЦ
   create: all
   match: "**/*"
 - type: directory
   path: _staff
-  label: Staff
+  label: Сотрудники
   create: all
   match: "**/*"
+  templates:
+  - staff-template
 - type: jekyll-posts
   label: Новости
   create: all

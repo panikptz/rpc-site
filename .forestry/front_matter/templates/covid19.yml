@@ -14,6 +14,7 @@ fields:
 - type: text
   name: url-doc
   label: URL документа
+  default: "/uploads/covid19-moshenniki_2.jpg"
 - type: datetime
   name: date
   label: Дата документа

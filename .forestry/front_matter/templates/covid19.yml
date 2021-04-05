@@ -19,7 +19,7 @@ fields:
   label: Дата документа
   config:
     date_format: YYYY-MM-DD HH:MM
-    time_format: Y-b-j H:mm
+    time_format: ''
     display_utc: false
     required: true
   default: now

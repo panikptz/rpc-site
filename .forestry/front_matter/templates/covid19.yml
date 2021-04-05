@@ -5,12 +5,21 @@ fields:
 - type: text
   name: layout
   label: layout
+  default: page
 - type: text
   name: title
-  label: title
+  label: Наименование
+  config:
+    required: true
 - type: text
   name: url-doc
-  label: url-doc
+  label: URL документа
 - type: datetime
   name: date
-  label: date
+  label: Дата документа
+  config:
+    date_format: YYYY-MM-DD HH:MM
+    time_format: Y-b-j H:mm
+    display_utc: false
+    required: true
+  default: now

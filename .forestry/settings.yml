@@ -5,6 +5,11 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: directory
+  path: _data
+  label: Данные
+  create: documents
+  match: "**/*"
+- type: directory
   path: _covid19
   label: covid19
   create: documents

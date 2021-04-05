@@ -5,6 +5,11 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: directory
+  path: _data
+  label: Данные
+  create: documents
+  match: "**/*"
+- type: directory
   path: _covid19
   label: covid19
   create: documents
@@ -13,14 +18,16 @@ sections:
   - covid19
 - type: directory
   path: _structure
-  label: Structure
+  label: Структура РПЦ
   create: all
   match: "**/*"
 - type: directory
   path: _staff
-  label: Staff
+  label: Сотрудники
   create: all
   match: "**/*"
+  templates:
+  - staff-template
 - type: jekyll-posts
   label: Новости
   create: all

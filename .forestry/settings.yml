@@ -9,6 +9,8 @@ sections:
   label: covid19
   create: documents
   match: "**/*"
+  templates:
+  - covid19
 - type: directory
   path: _structure
   label: Structure

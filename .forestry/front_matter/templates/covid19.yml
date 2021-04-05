@@ -27,5 +27,3 @@ fields:
     display_utc: false
     required: true
   default: now
-pages:
-- _covid19/как-не-попасться-на-уловки-мошенников-в-условиях-пандемии.md

@@ -52,3 +52,5 @@ fields:
     max: 
     labelField: 
   label: Сотрудники
+pages:
+- _structure/родовое-отделение.md

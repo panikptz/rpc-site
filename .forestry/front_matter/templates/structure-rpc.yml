@@ -47,6 +47,11 @@ fields:
       schema:
         format: html-blocks
     label: Прочая информация
+  - name: foto_staff
+    type: file
+    config:
+      maxSize: 0.293
+    label: Фотография сотрудника
   config:
     min: 
     max: 

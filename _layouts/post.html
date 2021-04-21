@@ -22,7 +22,7 @@
   <div class="article-author-side">
     {% include _author-bio.html %}
   </div>
-  <article itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+  <article class="bvi-tts" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
     <div class="headline-wrap">
       <h1 itemprop="name">{{ page.title }}</h1>
       <h2>{{ page.tagline }}</h2>
@@ -64,6 +64,8 @@
 </div><!-- /.footer-wrap -->
 
 {% include _scripts.html %}	        
+
+{% include _scripts_bvi.html %}
 
 </body>
 </html>

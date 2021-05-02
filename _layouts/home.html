@@ -48,7 +48,8 @@
 <div id="index" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Blog">
   <h3><a href="{{ site.url}}/news/">Новости</a></h3>
   <div class="container-all-news">
-  {% for post in site.posts limit:4 %}    
+  {% assign sorted = site.posts | sort: 'date' | reverse %}
+  {% for post in sorted limit:4 %}    
   <div class="container-news">
     <a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}"><h2 itemprop="headline">{{ post.title }}</h2>
     <p itemprop="text">{% if post.description %}{{ post.description }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 120 }}{% endif %}</p></a>

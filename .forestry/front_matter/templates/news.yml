@@ -12,3 +12,13 @@ fields:
   label: Краткое описание новости
   config:
     required: true
+- name: date
+  type: datetime
+  label: Дата новости
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+  description: Влияет на сортировку новостей
+  default: now

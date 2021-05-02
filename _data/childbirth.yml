@@ -1,0 +1,9 @@
+all: 1123
+boys: 556
+girls: 520
+twins:
+  count: 24
+  label: двойни
+trilpets:
+  count: 0
+  label: тройня

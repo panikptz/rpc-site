@@ -1,28 +1,31 @@
 ---
 layout: page
-permalink: /about/index.html
-title: About the Theme
+permalink: /about/
+title: О нас
 tagline: HMFAYSAL V2, a Jekyll Theme
 tags: [about, Jekyll, theme, responsive]
-modified: 9-9-2013
-image:
-  feature: texture-feature-02.jpg
-  credit: Texture Lovers
-  creditlink: http://texturelovers.com
----
-
-My name is **Hossain Mohd. Faysal**, I am an MSc + PhD candidate in *Electrical Engineering* at the [School of Engineering and Applied Science](http://www.seas.upenn.edu/) at **University of Pennsylvania**. I am licensed as a Professional Engineer (P.E) to practice in the states of Texas, Massachusetts and California. I graduated with a B.Sc degree in EECS from Texas A&M University in 2011 and with a B.Sc degree in Mathematics from Massachusetts Institute of Technology in 2012, and currently focusing on Electrical Engineering for my post-graduate studies.   
 
 ---
-Jekyll is pretty rad and figured releasing a cleaned up version of [my site](http://www.theevilgenius.tk) as a theme for others to hack and build on would be fun. So here be that theme --- I call it **HMFAYSAL V2**, a responsive Jekyll theme with a navigation drawer, large featured images and solid typography. 
+Дата образования Государственного бюджетного учреждения здравоохранения Республики Карелия «Перинатальный центр имени Гуткина К.А» (далее ГБУЗ «РПЦ» им. Гуткина К.А.) 31 мая 2023 года. Учреждение образовалось путем слияния двух родовспомогательных медицинских организаций г. Петрозаводска : ГБУЗ РК «Республиканского перинатального центра» и ГБУЗ РК «Родильного дома имени К.А. Гуткина»
 
-## HMFAYSAL V2 is all about:
+<a target="_blank" href="https://ru.wikipedia.org/wiki/Гуткин,_Константин_Андреевич">![image](/images/гуткин_к_а.jpg)<br>Гуткин К.А.</a>
 
-* Responsive templates. Features a slide out drawer menu in mobile browsers.
-* Gracefully degrading in older browsers. Compatible with Internet Explorer 8+ and all modern browsers. 
-* Minimal embellishments --- content first.
-* Large feature images for posts and pages.
-* Author sidebar to pimp your bio, photo[^2], and social media links.
-* Simple and clear permalink structure *(ie: domain.com/category/post-title)*
+ГБУЗ «РПЦ им. Гуткина К.А.» является клинической базой кафедры акушерства и гинекологии Петрозаводского Государственного Университета, что позволяет внедрять в работу современные научные подходы в диагностике и лечении заболеваний у женщин и детей.
 
-<a markdown="0" href="{{ site.url }}/technical-details" class="btn">Technical Details</a>
+ГБУЗ «РПЦ им. Гуткина К.А.» это медицинская организация, имеющая в структуре консультативно-диагностическое отделение, женскую консультацию, отделение функциональной диагностики, отделение МРТ и лучевой диагностики, физиотерапевтеческий кабинет, дневной стационар, акушерский, гинекологический и неонатальный стационары, оказывающее специализированную и высокотехнологичную медицинскую помощь женщинам и детям Республики Карелии, а также пациентам из других регионов Российской Федерации.
+
+Государственное бюджетное учреждение здравоохранения РК «Перинатальный центр им. Гуткина К.А.» состоит состоит из двух крупных подразделений:
+
+– Перинатального центра, здание которого расположено по ул. Сыктывкарская, д. 9, в котором размещены отделения акушерско-гинекологического профиля и неонатального профиля, консультативно-диагностическое отделение, дневной стационар
+
+– Женской консультации, расположенной по адресу: ул. Кузьмина, д. 62. В женской консультации проводятся приемы акушеров-гинекологов, в том числе специализированные. Проводится диспансерное наблюдение за беременными и гинекологическими больными.
+
+В родильном доме трудятся высококвалифицированные врачи, акушерки и медицинские сестры.
+
+Основная цель и задача нашего учреждения – сохранение здоровья женщин и способствование рождения здорового малыша. Поэтому основными направлениями работы амбулаторной и стационарной помощи является своевременное выявление неблагоприятных факторов, влияющих на развитие беременности, профилактика осложнений беременности и осложнений в родах и послеродовом периоде, изучение перинатальной психологии и поощрение грудного вскармливания, как одной и самых главных основ здоровья человека в будущем. 
+
+В консультативно-диагностическом отделении и женской консультации ГБУЗ «РПЦ им. Гуткина К.А.» осуществляют свои функции школы для подготовки к родам для будущих мам и семейных пар, которые помогут быстрее и легче освоиться в новом родительском статусе, разделить радости и тяготы «интересного положения», с уверенностью и удовольствием растить малыша, научиться помогать ему и друг другу – до, во время и после родов.
+
+Подготовка к родам продолжается и в акушерском стационаре, с женщинами тесно работают медицинские психологи, врачи, средний медперсонал медицинской организации 
+
+Ведение родов осуществляется на высоком современном уровне с проведением постоянного мониторинга за основными жизненными показателями будущей мамы и плода, широким применением методов рационального обезболивания – эпидуральной и спинальной анестезии.

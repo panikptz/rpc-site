@@ -1,0 +1,59 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+{% include _head.html %}
+</head>
+
+<body class="docs" itemscope itemtype="http://schema.org/WebPage">
+
+{% include _browser-upgrade.html %}
+
+{% include _navigation.html %}
+
+{% if page.image.feature %}<div class="image-wrap">
+  <img src="{{ site.url }}/images/{{ page.image.feature }}" alt="{{ page.title }} feature image" itemprop="primaryImageOfPage">
+  {% if page.image.credit %}<span class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></span>{% endif %}
+</div><!-- /.image-wrap -->{% endif %}
+
+<div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Blog">
+  <div class="article-author-side">
+    {% include _left-container.html %}
+  </div>
+  
+  <article class="bvi-tts" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+    
+    <div class="headline-wrap">
+      <h1 itemprop="name">{{ page.title }}</h1>
+      <h2>{{ page.tagline }}</h2>
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap" itemprop="text">
+      {{ content }}
+
+      <!-- Обработка pdf файлов -->
+      {% for file in page.files-pdf %}
+      <iframe src="{{ site.url }}{{ file }}" width="100%" height="600px"></iframe>
+      {% endfor %}
+    
+
+      {% if site.docs.size > 0 %}
+        <h4><small class="pull-left"><a href="#" onclick="window.history.back();"><- Назад</a></small></h4>
+      {% endif %}
+    </div><!-- /.article-wrap -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrap">
+  <footer>
+    {% include _footer.html %}
+  </footer>
+</div><!-- /.footer-wrap -->
+
+{% include _scripts.html %}	        
+
+{% include _scripts_bvi.html %}
+
+</body>
+</html>

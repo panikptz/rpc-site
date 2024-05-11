@@ -33,7 +33,7 @@ General notes and suggestions for customizing HMFAYSAL V2.
 {% highlight text %}
 Jekyll-HMFAYSAL-V2-Theme/
 ├── _includes/
-|    ├── _author-bio.html  #bio stuff goes here
+|    ├── _left-container.html  #bio stuff goes here
 |    ├── _browser-upgrade.html  #displays on IE8 and less
 |    ├── _footer.html  #site footer
 |    ├── _head.html  #site head
@@ -69,7 +69,7 @@ Most of the variables found here are used in the .html files found in `_includes
 
 #### Owner/Author Information
 
-Change your name, bio, and avatar photo (100x100 pixels or larger), Twitter url, email, and Google+ url. If you want to link to an external image on Gravatar or something similiar you'll need to edit the path in `_author-bio.html` since it assumes it is located in `\images`.
+Change your name, bio, and avatar photo (100x100 pixels or larger), Twitter url, email, and Google+ url. If you want to link to an external image on Gravatar or something similiar you'll need to edit the path in `_left-container.html` since it assumes it is located in `\images`.
 
 Including a link to your Google+ profile has the added benefit of displaying [Google Authorship](https://plus.google.com/authorship) in Google search results if you've went ahead and applied for it. Don't have a Google+ account? Just leave it blank.
 

@@ -1,5 +1,5 @@
-title:            ГБУЗ РЕСПУБЛИКИ КАРЕЛИЯ "РЕСПУБЛИКАНСКИЙ ПЕРИНАТАЛЬНЫЙ ЦЕНТР"
-title_small:      ГБУЗ РПЦ
+title:            ГБУЗ РЕСПУБЛИКИ КАРЕЛИЯ "РЕСПУБЛИКАНСКИЙ ПЕРИНАТАЛЬНЫЙ ЦЕНТР ИМ. ГУТКИНА К.А."
+title_small:      ГБУЗ "РПЦ им. Гуткина К.А."
 title_address:    Республика Карелия, г. Петрозаводск, ул. Сыктывкарская, д. 9
 title_phone_1:    Приемная главного врача<br>8(8142) 333-111
 title_phone_2:    Голосовое меню<br>8(8142) 333-112
@@ -16,49 +16,13 @@ owner:
   avatar:         ico_telephone.jpg
   bio:            "Регистратура Консультативно-диагностического отделения: 8905-299-97-16, 8(8142)333-115<br><br>Приемный покой:<br>8905-299-97-12, 8(8142)333-113<br><br>Отделение лучевой и магнитно-резонансной диагностики:<br>8(8142)333-111 доб. 1138<br><br>Пост родового отделения:<br>8905-299-97-19,<br>8(8142)333-111,<br>доб. 5025 или доб. 5026"
   email:          rpc@zdrav10.ru
-  # Social networking links are used in author-bio sidebar. Update and remove as you like.
-  # To register at HMFAYSAL SOCIAL, visit http://social.hmfaysal.tk
-  twitter:        
-  facebook:       
-  github:         
-  linkedin:       
-  instagram:      
-  lastfm:         
-  tumblr:         
-  hmfaysalsocial: 
-  # For Google Authorship https://plus.google.com/authorship
-  google_plus:    
+  
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:   UA-39365944-4
 google_verify:      
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:        
-
-# Links to include in top navigation
-# For external links add external: true
-# links:
-#   - title: Главная
-#     url: /
-#   - title: Новости
-#     url: /news/
-#   - title: Информация для пациентов
-#     url: /articles/
-#   - title: Структура центра
-#     url: /about/
-#   - title: Платные услуги
-#     url: /technical-details/
-#   - title: О нас
-#     url: /about/
-#   - title: Задать вопрос
-#     url: /about/
-  # - title: Setup
-  #   url: /theme-setup/
-  # - title: T-Details
-  #   url: /technical-details/
-  # - title: The Evil-Genius
-  #   url: http://www.theevilgenius.tk/
-    # external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Europe/Moscow
@@ -94,6 +58,8 @@ collections:
     output: false
   covid19:
     output: true
+  docs:
+    output: true
     # Почему-то указанная здесь сортировака не работает на Github pages.
     # Поэтому указываю сортировку в каждом файле сотрудника и обрабатываю ее в _\layouts\department.html
     # sort_by: order
@@ -109,3 +75,8 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+  - scope:
+      path: ""
+      type: "docs"
+    values:
+      layout: "doc"

@@ -2,18 +2,18 @@
     url: /
   - title: Новости
     url: /news/
-  - title: Информация для пациентов
-    url: /articles/
+  # - title: Информация для пациентов
+  #   url: /articles/
   - title: Банк документов
-    url: /doc/
+    url: /docs/
   - title: Структура центра
     url: /structure/
-  - title: Платные услуги
-    url: /technical-details/
+  # - title: Платные услуги
+  #   url: /technical-details/
   - title: О нас
     url: /about/
-  - title: Задать вопрос
-    url: /about/
+  # - title: Задать вопрос
+  #   url: /ask-question/
   # - title: Setup
   #   url: /theme-setup/
   # - title: T-Details

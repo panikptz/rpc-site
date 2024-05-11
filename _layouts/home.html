@@ -11,14 +11,12 @@
 
 <body class="home" itemscope itemtype="http://schema.org/WebPage">
 
-<a href="#" class="bvi-open" title="Версия сайта для слабовидящих">Версия сайта для слабовидящих</a>
-
 {% include _browser-upgrade.html %}
 
 {% include _navigation.html %}
 
 {% if page.image.feature %}<div class="image-wrap" id="headslideshow">
-  <img data-effect="panUp" src="{{ site.url }}/images/{{ page.image.feature }}" alt="{{ page.title }} feature image" itemprop="primaryImageOfPage">
+  <img data-effect="panUp" src="{{ site.url }}/images/{{ page.image.feature }}" alt="{{ page.image.alt }}" itemprop="primaryImageOfPage">
   <!-- {% if page.image.credit %}<span class="image-credit">Фотография: {{ page.image.credit }}</span>{% endif %} -->
   <!-- <img data-effect="zoomOut" src="{{ site.url }}/images/holl.jpg"> -->
   <!-- <img data-effect="panRight" src="{{ site.url }}/images/palata.jpg"> -->
@@ -42,10 +40,13 @@
 {% endif %}
 
 <div class="article-author-side">
-  {% include _author-bio.html %}
+  {% include _left-container.html %}
 </div>
 
 <div id="index" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Blog">
+
+  {% include _index-about.html %}
+
   <h3><a href="{{ site.url}}/news/">Новости</a></h3>
   <div class="container-all-news">
   {% assign sorted = site.posts | sort: 'date' | reverse %}
@@ -57,15 +58,19 @@
   {% endfor %}
 </div> <!-- .container-all-news -->
 
-<h3><a href="{{ site.url}}/covid19/">Коронавирус COVID-19</a></h3>
+<!-- <h3><a href="{{ site.url}}/covid19/">Коронавирус COVID-19</a></h3>
 {% assign items = site.covid19 | sort: 'date' | reverse %}
 {% for item in items limit:4 %}
 {% assign f = item.path | split: '/' | last %}
 {% if f != 'index.md' %}
 <a href="{{ site.url }}{% if item.url-doc != '' and item.url-doc %}{{ item.url-doc }}{% else %}{{ item.url }}{% endif %}" {% if item.url-doc != '' and item.url-doc %}target="_blank"{% endif %} rel="bookmark" title="{{ item.title }}"><h2 itemprop="headline">{{ item.title }}</h2></a>
 {% endif %}
-{% endfor %}
+{% endfor %} -->
 
+{% include _hospital_review.html %}
+{% include _med_polis.html %}
+{% include _minzdrav.html %}
+{% include _banners_org.html %}
 
 </div><!-- /#index -->
 

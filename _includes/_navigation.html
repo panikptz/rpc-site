@@ -4,7 +4,8 @@
     {% assign data = site.data.childbirth %}
 
     <header id="top" role="banner">
-        <div class="logo"></div>
+        <!-- <a href="#" class="bvi-open" title="Версия сайта для слабовидящих">Версия сайта для слабовидящих</a> -->
+        <a href="{{ site.url }}" class="logo"></a>
         <div class="block">
             <div class="head-block">
             <h1 class="block-title-name">{{ site.title }}</h1>
@@ -19,17 +20,18 @@
                 <h2 class="block-title">{{ site.title_phone_2 }}</h2>
             </div>
             <div class="head-block line">
-                <h2 class="block-title">С 1 января 2021 года<br>{{ data['родов'] }} родов&nbsp;&nbsp;{{ data['мальчики']['количество'] }} {{ data['мальчики']['метка'] }}&nbsp;&nbsp;{{ data['девочки']['количество'] }} {{ data['девочки']['метка'] }}{% if data['двойни']['показать'] %}&nbsp;&nbsp;{{ data['двойни']['количество'] }} {{ data['двойни']['метка'] }}{% endif %}{% if data['тройни']['показать'] %}&nbsp;&nbsp;{{ data['тройни']['количество'] }} {{ data['тройни']['метка'] }}{% endif %}</h2>
+                <h2 class="block-title">С 1 января 2024 года<br>{{ data['родов'] }} родов&nbsp;&nbsp;{{ data['мальчики']['количество'] }} {{ data['мальчики']['метка'] }}&nbsp;&nbsp;{{ data['девочки']['количество'] }} {{ data['девочки']['метка'] }}{% if data['двойни']['показать'] %}&nbsp;&nbsp;{{ data['двойни']['количество'] }} {{ data['двойни']['метка'] }}{% endif %}{% if data['тройни']['показать'] %}&nbsp;&nbsp;{{ data['тройни']['количество'] }} {{ data['тройни']['метка'] }}{% endif %}</h2>
             </div>
         </div>
     </header>
-
+    
     <nav id="nav" role="navigation">
         <div class="block">
             <h2 class="block-title">Chapters</h2>
             <ul>
                 {% for link in site.data.navigation %}
-				<li><a href="{% if link.external %}{{ link.url }}{% else %}{{ site.url }}{{ link.url }}{% endif %}" {% if link.external %}target="_blank"{% endif %}>{{ link.title }}</a></li>
+                <!-- <li><a href="{% if link.external %}{{ link.url }}{% else %}{{ site.url }}{{ link.url }}{% endif %}" {% if link.external %}target="_blank"{% endif %}>{{ link.title }}</a></li> -->
+                <li><a href="{{ site.url }}{{ link.url }}" {% if page.url == link.url %}style="color: red;"{% endif %}>{{ link.title }}</a></li>
 		        {% endfor %}
 		        <!-- <li><a href="{{ site.url }}/feed.xml" title="Atom/RSS feed">Feed</a> -->
             </ul>

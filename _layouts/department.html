@@ -15,7 +15,7 @@
 
 <div id="main" role="main"  itemprop="mainContentOfPage">
     <div class="article-author-side">
-      {% include _author-bio.html %}
+      {% include _left-container.html %}
     </div>
     <article itemscope itemtype="http://schema.org/CreativeWork">
       <h1 itemprop="name">{{ page.title }}</h1>
@@ -24,26 +24,100 @@
 
 {% assign this_department = page.path | split: '/' | last | replace: ".md", "" %}
 
-{{ content }}
+<div class="link-page">
+<a href="#contacts">Контакты</a>
+{% if page.docs %}<a href="#docs">Документы</a>{% endif %}
+<a href="#staff">Сотрудники</a>
+</div>
 
-{{ page.about }}
+<!-- Описание отделения -->
+<div class="department-content">{{ page.about }}</div>
 
-{% for staff in page.staff %}
-<h3>{{ staff.name }}</h3>
-<img src="{{site.url}}{{staff.foto_staff}}">
+<!-- {{ content }} -->
+{% if page.contacts %}<div id="contacts" class="otdelenie-contacts-container"><h4>Контакты</h4><div class="otdelenie-contacts">{{ page.contacts}}</div></div>{% endif %}
+
+<!-- {% assign filtered_staff = site.staff | where: 'otdelenie', this_department | sort: 'order'%}
+{% for staff in filtered_staff %}
+<h3>{{ staff.title | upcase }}</h3>
+<img src="{{site.url}}{{staff.foto}}">
 <h4>{{ staff.position }}</h4>
-<b>Образование:</b>{{ staff.education }}
-{{ staff.other_info }}
+{{ staff.content | markdownify }}
+{% endfor %} -->
+
+<!-- Документы отделения -->
+{% if page.docs.size > 0 %}
+<h4 id="docs">Документы отделения</h4>
+{% endif %}
+<ui>
+{% for doc in page.docs %}
+<li><a {% if doc[1] contains '/uploads/' %}target="_blank"{% endif %} href="{{ doc[1] }}">{{ doc[0] }}</a></li>
 {% endfor %}
-<!-- <ul> -->
-    <!-- {% assign filtered_staff = site.staff | sort: 'order' %}
-    {% for staff in filtered_staff %}
-    {% assign pp = staff.path | split: '/' %}
-    {% if pp[1] == this_department %}
-    <li>{{ staff.title | upcase }}{{ staff.content | markdownify }}</li>
-    {% endif %}
-    {% endfor %} -->
-<!-- </ul> -->
+</ui>
+
+  {% assign doctor = false %}
+  {% assign filtered_staff = site.staff | sort: 'order' %}
+  {% for staff in filtered_staff %}
+  {% assign pp = staff.path | split: '/' %}
+  {% if doctor == false and pp[1] == this_department and pp[2] == 'doctor' %}
+  {% assign doctor = true %}
+  <!-- Таблица с врачами -->
+  <h4 id="staff">Врачи отделения</h4>
+  <table class="tbl-staff" border="1">
+    <thead>
+      <tr>
+        <th>Сотрудник</th>
+        <th>Должность</th>
+        <th>Уровень образования</th>
+        <th>Оганизация, выдавшая документ об образовании</th>
+        <th>Год выдачи</th>
+        <th>Специальность</th>
+        <th>Квалификация</th>
+        <th>Специальность (сертификат/ аккредитация)</th>
+        <th>Срок действия (сертификат/ аккредитация)</th>
+      </tr>
+      </thead>
+      <tbody>
+  {% endif %}
+  {% if pp[1] == this_department and pp[2] == 'doctor' %}
+  <tr><td data-label="Сотрудник">{{ staff.title }}</td><td data-label="Должность">{{ staff.position }}</td><td data-label="Уровень образования">{{ staff.education.basic.level }}</td><td data-label="Оганизация, выдавшая документ об образовании">{{ staff.education.basic.org }}</td><td data-label="Год выдачи">{{ staff.education.basic.date }}</td><td data-label="Специальность">{{ staff.education.basic.speciality }}</td><td data-label="Квалификация">{{ staff.education.basic.qualification }}</td><td data-label="Специальность (сертификат/ аккредитация)">{{ staff.education.additional.speciality }}</td><td data-label="Срок действия (сертификат/ аккредитация)">{{ staff.education.additional.date }}</td></tr>
+  {% endif %}
+  {% endfor %}
+  {% if doctor == true %}
+  </tbody></table>
+  {% endif %}
+
+  {% assign other = false %}
+  {% for staff in filtered_staff %}
+  {% assign pp = staff.path | split: '/' %}
+  {% if other == false and pp[1] == this_department and pp[2] != 'doctor' %}
+  {% assign other = true %}
+  <!-- Таблица с остальным мед. персоналом -->
+  <h4>Средний медицинский персонал отделения</h4>
+  <table class="tbl-staff" border="1">
+    <thead>
+      <tr>
+        <th>Сотрудник</th>
+        <th>Должность</th>
+        <th>Уровень образования</th>
+        <th>Оганизация, выдавшая документ об образовании</th>
+        <th>Год выдачи</th>
+        <th>Специальность</th>
+        <th>Квалификация</th>
+        <th>Специальность (сертификат/ аккредитация)</th>
+        <th>Срок действия (сертификат/ аккредитация)</th>
+      </tr>
+      </thead>
+      <tbody>
+  {% endif %}
+  {% if pp[1] == this_department and pp[2] != 'doctor' %}
+  <tr><td data-label="Сотрудник">{{ staff.title }}</td><td data-label="Должность">{{ staff.position }}</td><td data-label="Уровень образования">{{ staff.education.basic.level }}</td><td data-label="Оганизация, выдавшая документ об образовании">{{ staff.education.basic.org }}</td><td data-label="Год выдачи">{{ staff.education.basic.date }}</td><td data-label="Специальность">{{ staff.education.basic.speciality }}</td><td data-label="Квалификация">{{ staff.education.basic.qualification }}</td><td data-label="Специальность (сертификат/ аккредитация)">{{ staff.education.additional.speciality }}</td><td data-label="Срок действия (сертификат/ аккредитация)">{{ staff.education.additional.date }}</td></tr>
+  {% endif %}
+  {% endfor %}
+  {% if other == true %}
+  </tbody></table>
+  {% endif %}
+
+
 
 </div><!-- /.article-wrap -->
 </article>

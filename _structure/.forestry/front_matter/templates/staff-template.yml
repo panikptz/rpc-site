@@ -1,0 +1,15 @@
+---
+label: Staff template
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: FIO
+  description: Фамилия Имя Отчество
+  config:
+    required: true
+- type: number
+  name: order
+  label: order
+pages:
+- _staff/aopb/хвоина-анна-викторовна.md

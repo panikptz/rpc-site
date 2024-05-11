@@ -1,0 +1,24 @@
+---
+label: News template
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: Заголовок новости
+  config:
+    required: true
+- type: text
+  name: description
+  label: Краткое описание новости
+  config:
+    required: true
+- name: date
+  type: datetime
+  label: Дата новости
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+  description: Влияет на сортировку новостей
+  default: now

@@ -1,0 +1,49 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+{% include _head.html %}
+</head>
+
+<body class="docs" itemscope itemtype="http://schema.org/WebPage">
+
+{% include _browser-upgrade.html %}
+
+{% include _navigation.html %}
+
+<div id="main" role="main"  itemprop="mainContentOfPage">
+    <div class="article-author-side">
+      {% include _left-container.html %}
+    </div>
+    <article itemscope itemtype="http://schema.org/CreativeWork">
+      <h1 itemprop="name">{{ page.title }}</h1>
+      <div class="article-wrap" itemprop="text">
+
+<!-- {{ content }} -->
+{% assign sorted = site.docs | sort: 'date' | reverse %}
+<ul>
+  {% for doc in sorted %}
+  <li><a href="{{ site.url }}{{ doc.url }}">{{ doc.title | upcase }}</a></li>
+  {% endfor %}
+</ul>
+
+
+</div><!-- /.article-wrap -->
+</article>
+</div><!-- /#main -->
+
+
+<div class="footer-wrap">
+    <footer>
+      {% include _footer.html %}
+    </footer>
+  </div><!-- /.footer-wrap -->
+  
+{% include _scripts.html %}
+  
+{% include _scripts_bvi.html %}
+
+</body>
+</html>

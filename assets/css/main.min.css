@@ -1052,7 +1052,7 @@
 {
 	display:inline;
 	float:left;
-	width:100%
+	width:100%;
 }
 .third
 {
@@ -1064,23 +1064,23 @@
 {
 	display:table;
 	line-height:0;
-	content:""
+	content:"";
 }
 .third:after
 {
-	clear:both
+	clear:both;
 }
 .third img
 {
 	display:inline;
 	float:left;
-	width:33.333333333333336%
+	width:33.333333333333336%;
 }
 .third figcaption
 {
 	display:inline;
 	float:left;
-	width:100%
+	width:100%;
 }
 .btn
 {
@@ -1094,16 +1094,16 @@
 	border:2px solid #111!important;
 	-webkit-border-radius:4px;
 	-moz-border-radius:4px;
-	border-radius:4px
+	border-radius:4px;
 }
 .btn:visited
 {
-	color:#fff
+	color:#fff;
 }
 .btn:hover
 {
 	color:#111;
-	background-color:#fff
+	background-color:#fff;
 }
 .btn:active
 {
@@ -1111,7 +1111,7 @@
 	-moz-transform:translate(0,2px);
 	-ms-transform:translate(0,2px);
 	-o-transform:translate(0,2px);
-	transform:translate(0,2px)
+	transform:translate(0,2px);
 }
 .well
 {
@@ -1133,7 +1133,7 @@
 	font-style:normal;
 	font-weight:400;
 	src:url(../fonts/icomoon.eot);
-	src:url(../fonts/icomoon.eot?#iefix) format('embedded-opentype'),url(../fonts/icomoon.woff) format('woff'),url(../fonts/icomoon.ttf) format('truetype'),url(../fonts/icomoon.svg#icomoon) format('svg')
+	src:url(../fonts/icomoon.eot?#iefix) format('embedded-opentype'),url(../fonts/icomoon.woff) format('woff'),url(../fonts/icomoon.ttf) format('truetype'),url(../fonts/icomoon.svg#icomoon) format('svg');
 }
 	[data-icon]:before
 {
@@ -1155,65 +1155,65 @@
 	line-height:1;
 	text-transform:none;
 	speak:none;
-	font-variant:normal
+	font-variant:normal;
 }
 .icon-mail:before
 {
-	content:"\e600"
+	content:"\e600";
 }
 .icon-instagram:before
 {
-	content:"\e601"
+	content:"\e601";
 }
 .icon-facebook:before
 {
-	content:"\e602"
+	content:"\e602";
 }
 .icon-twitter:before
 {
-	content:"\e603"
+	content:"\e603";
 }
 .icon-google-plus:before
 {
-	content:"\e604"
+	content:"\e604";
 }
 .icon-feed:before
 {
-	content:"\e605"
+	content:"\e605";
 }
 .icon-feed2:before
 {
-	content:"\e606"
+	content:"\e606";
 }
 .icon-linkedin:before
 {
-	content:"\e607"
+	content:"\e607";
 }
 .icon-tumblr:before
 {
-	content:"\e608"
+	content:"\e608";
 }
 .icon-lastfm:before
 {
-	content:"\e609"
+	content:"\e609";
 }
 .icon-github:before
 {
-	content:"\e60a"
+	content:"\e60a";
 }
 .icon-droplet:before
 {
-	content:"\e60b"
+	content:"\e60b";
 }
 	form
 {
-	margin:0 0 5px
+	margin:0 0 5px;
 }
 	form fieldset
 {
 	padding:0;
 	margin-bottom:5px;
-	border-width:0
+	border-width:0;
 }
 	form legend
 {
@@ -1229,13 +1229,13 @@
 }
 	form p
 {
-	margin-bottom:2.5px
+	margin-bottom:2.5px;
 }
 	form ul
 {
 	padding:0;
 	margin:0 0 5px;
-	list-style-type:none
+	list-style-type:none;
 }
 	form br
 {
@@ -1244,7 +1244,7 @@
 	button,input,label,select,textarea
 {
 	vertical-align:baseline;
-	*vertical-align:middle
+	vertical-align:middle;
 }
 	button,input,select,textarea
 {
@@ -1340,7 +1340,7 @@
 }
 	input[type=file],select
 {
-	*margin-top:4px
+	margin-top:4px;
 }
 	select
 {
@@ -1643,7 +1643,8 @@
 .byline
 {
 	clear:both;
-	font-size:80%
+	font-size:80%;
+	float:inline-end;
 }
 .article-author-bottom h3,.article-author-side h3
 {
@@ -2804,6 +2805,7 @@
 	margin-left:25%
 }
 
+
 }
 	@media only screen and (min-width:48em)
 {
@@ -2831,8 +2833,8 @@
 {
 	width:16.666666666%
 }
-
 }
+
 	@media only screen and (min-width:86.375em)
 {
 .site-name
@@ -3042,7 +3044,7 @@
     display: none;
 	margin:0;
 	/* font-size:1.875em; */
-    font-size:1.275em;
+    font-size:1.175em;
 	line-height:1.2em;
 	/* text-align:center; */
 	/* white-space:nowrap; */
@@ -3065,12 +3067,12 @@
     display: none;
 	margin:0;
 	/* font-size:1.875em; */
-    font-size:1em;
+    font-size:0.8em;
 	line-height:1.2em;
 	/* text-align:center; */
 	white-space:nowrap;
-    margin-left: 6.4em;
-	margin-top: 0.25em;
+    margin-left: 7.4em;
+	margin-top: 0.75em;
 }
 
 #top .block-title
@@ -3100,19 +3102,17 @@ border-left: solid 1px;
 	white-space:nowrap
 }
 
-#top .logo{
+/* #top .logo{
     position: absolute;
     right:0.5em;
     padding: 1.5em 1.25em;
     margin:0.1em;
     width:2.7em;
     height:2.0em;
-    /* background-color: #fff; */
-    /* border-radius: 0 50px 50px 0; */
     background-image:url(/assets/img/logo.png);
     background-repeat: no-repeat;
     background-size: contain;
-}
+} */
 
 	#top .nav-btn
 {
@@ -3130,24 +3130,22 @@ border-left: solid 1px;
 }
 	footer[role=contentinfo]
 {
-	background:#ddd
+	/* background:#ddd */
 }
 	@media screen and (min-width:45.0625em)
 {
     
-    #top .logo{
+    /* #top .logo{
         position: absolute;
         left:0.5em;
         padding: 1.5em 1.25em;
         margin:0.1em;
         width:2.7em;
         height:2.0em;
-        /* background-color: #fff; */
-        /* border-radius: 0 50px 50px 0; */
         background-image:url(/assets/img/logo.png);
         background-repeat: no-repeat;
         background-size: contain;
-    }
+    } */
 
  
     #nav li a
@@ -3366,4 +3364,141 @@ border-left: solid 1px;
 		width: 29em;
 	}
 	
+}
+
+/* Мои стили */
+/* Стили для всех режимов */
+
+#index h3:not(:first-of-type) {
+	margin:2em 0 0.3em 0;
+}
+
+.bvi-open{
+	position: absolute;
+    right: 10px;
+	bottom: 0;
+    z-index: 101;
+    color: #fff;
+	font-size: 0.8em;
+}
+
+#top .logo{
+	position: absolute;
+	top: 0.3em;
+	left: unset;
+	width: 4.6em;
+    height: 4.6em;
+    z-index: 1;
+	background-image:url(/assets/img/logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+body.department h4{
+	margin-bottom: 1em;
+    margin-top: 2em;
+}
+body.department div.link-page{
+	text-align:right;
+	margin-bottom: 1em;
+}
+body.department div.link-page a{
+	color:#847171;
+	border-left: 2px solid #fb6802;
+	padding: 0 5px 0 5px;
+}
+.otdelenie-contacts-container
+{
+	margin-bottom: 50px;
+}
+.department-content p
+{
+	text-indent: 1.625rem; 
+}
+
+table.tbl-staff
+{
+	width: 100%; /* Ширина таблицы равна ширине контейнера */
+ 	border-collapse: collapse; /* Убираем двойные границы между ячейками */
+	font-size: 0.7em;
+}
+
+/* Стили для ячеек таблицы */
+table.tbl-staff td, table.tbl-staff th {
+	border: 1px solid rgb(0, 0, 0); /* Границы ячеек */
+	padding: 8px; /* Отступы внутри ячеек */
+	text-align: left; /* Выравнивание текста */
+   }
+   
+   /* Стили для изображений внутри таблицы */
+table.tbl-staff img {
+	max-width: 100%; /* Изображения не будут больше ширины своей ячейки */
+   }
+table.tbl-staff td, table.tbl-staff th {
+    padding: 10px;
+    border: 1px solid #cbbdbd;
+}
+table.tbl-staff tbody tr:nth-child(odd){
+    background-color: #f0f4c3
+}
+
+footer .parent {
+	border-top: 1px solid #000;
+	margin: 1rem;
+	padding: 0.2rem 0.2rem;
+	text-align: center;
+	display: flex;
+ 	justify-content: space-between;
+  }
+footer .child {
+	display: inline-block;
+	padding: 1rem 1rem;
+	vertical-align: middle;
+  }
+
+.docs table{
+	border:1px solid #cbbdbd;
+}
+.docs table td{
+	border:1px solid #cbbdbd;
+	padding:5px;
+}
+  
+
+/* Мой media запрос */
+@media (max-width:1200px){
+
+	#top .logo{
+		position: absolute;
+		top: 0.3em;
+		right: 0.3em;
+		width: 4.6em;
+		height: 4.6em;
+		z-index: 1;
+		background-image:url(/assets/img/logo.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	/* Таблица с сотрудниками в отделениях адаптируется к экранам шириной менее 1200px */
+	table.tbl-staff thead {
+		display: none;
+	}
+	
+	table.tbl-staff tr {
+		display: block;
+	}
+	
+	
+	table.tbl-staff td {
+		display: flex;
+		justify-content: space-between;
+		font-size: 14px;
+	}
+	
+	table.tbl-staff td::before {
+		content: attr(data-label);
+		font-weight: bold;
+		margin-right: 20px;
+	}
 }

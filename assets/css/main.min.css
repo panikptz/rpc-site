@@ -1627,7 +1627,8 @@
 {
 	width:100%;
 	height:20em;
-	-ms-interpolation-mode:bicubic
+	-ms-interpolation-mode:bicubic;
+	object-fit: cover;
 }
 .image-wrap .headline-wrap
 {
@@ -3096,8 +3097,8 @@ border-left: solid 1px;
 {   
     display: block;
 	margin:0;
-	font-size:1.875em;
-	line-height:1.2em;
+	font-size:1.4em;
+	line-height:2.8em;
 	text-align:center;
 	white-space:nowrap
 }

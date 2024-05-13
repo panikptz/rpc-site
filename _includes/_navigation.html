@@ -31,7 +31,7 @@
             <ul>
                 {% for link in site.data.navigation %}
                 <!-- <li><a href="{% if link.external %}{{ link.url }}{% else %}{{ site.url }}{{ link.url }}{% endif %}" {% if link.external %}target="_blank"{% endif %}>{{ link.title }}</a></li> -->
-                <li><a href="{{ site.url }}{{ link.url }}" {% if page.url == link.url %}style="color: red;"{% endif %}>{{ link.title }}</a></li>
+                <li><a href="{{ site.url }}{{ link.url }}" {% if page.url == link.url %}style="color: black;"{% endif %}>{{ link.title }}</a></li>
 		        {% endfor %}
 		        <!-- <li><a href="{{ site.url }}/feed.xml" title="Atom/RSS feed">Feed</a> -->
             </ul>

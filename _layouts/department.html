@@ -22,8 +22,7 @@
       <div class="article-wrap" itemprop="text">
 
 
-{% assign this_department = page.path | split: '/' | last | replace: ".md", "" %}
-
+<!-- Переходны на якоря -->
 <div class="link-page">
 <a href="#contacts">Контакты</a>
 {% if page.docs %}<a href="#docs">Документы</a>{% endif %}
@@ -33,16 +32,9 @@
 <!-- Описание отделения -->
 <div class="department-content">{{ content }}</div>
 
-<!-- {{ content }} -->
+<!-- Контакты -->
 {% if page.contacts %}<div id="contacts" class="otdelenie-contacts-container"><h4>Контакты</h4><div class="otdelenie-contacts">{{ page.contacts}}</div></div>{% endif %}
 
-<!-- {% assign filtered_staff = site.staff | where: 'otdelenie', this_department | sort: 'order'%}
-{% for staff in filtered_staff %}
-<h3>{{ staff.title | upcase }}</h3>
-<img src="{{site.url}}{{staff.foto}}">
-<h4>{{ staff.position }}</h4>
-{{ staff.content | markdownify }}
-{% endfor %} -->
 
 <!-- Документы отделения -->
 {% if page.docs.size > 0 %}
@@ -53,6 +45,9 @@
 <li><a {% if doc[1] contains '/uploads/' %}target="_blank"{% endif %} href="{{ doc[1] }}">{{ doc[0] }}</a></li>
 {% endfor %}
 </ui>
+
+<!-- Сотрудники -->
+{% assign this_department = page.path | split: '/' | last | replace: ".md", "" %}
 
   {% assign doctor = false %}
   {% assign filtered_staff = site.staff | sort: 'order' %}

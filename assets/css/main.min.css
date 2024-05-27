@@ -3390,7 +3390,7 @@ border-left: solid 1px;
 	width: 4.6em;
     height: 4.6em;
     z-index: 1;
-	background-image:url(/assets/img/logo.png);
+	background-image:url(/assets/img/logo.webp);
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -3476,7 +3476,7 @@ footer .child {
 		width: 4.6em;
 		height: 4.6em;
 		z-index: 1;
-		background-image:url(/assets/img/logo.png);
+		background-image:url(/assets/img/logo.webp);
 		background-repeat: no-repeat;
 		background-size: contain;
 	}
